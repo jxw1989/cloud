@@ -54,8 +54,27 @@
 				<artifactId>jackson-annotations</artifactId>
 				<version>2.9.8</version>
 			</dependency>
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				    <version>19.0</version>
+				
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	<modules>
 		<module>cloud-sso</module>
 		<module>cloud-gateway</module>
